@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Videojuego rítmico desarrollado con javascript y Tone.js"/>
+    <meta name="keywords" content="juego, ritmo, ufg, estudiantes, 2025, tonejs, js"/>
+    <meta name="copyright" content="2025 Stardust Knights"/>
+    <meta name="author" content="Stardust Knights"/>
+    <title>TEDDY-BASH - Menú</title>
+    <link rel="icon" href="media/favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Menú Principal -->
+    <div id="menu-container" class="menu-container">
+        <img src="media/titulo_TBSH.png" alt="Logo del juego" class="menu-logo">
+        <button onclick="startGame()">Jugar</button>
+        <button onclick="showTutorial()">Tutorial</button>
+        <button onclick="showCuriosidades()">Curiosidades musicales</button>
+    </div>
+
+    <!-- Pantalla de Tutorial -->
+    <div id="tutorial-container" class="tutorial-container" style="display: none;">
+        <button class="close-tutorial" onclick="closeTutorial()">X</button>
+        <h1>TUTORIAL</h1>
+        <p></p>
+        <h2>¡Bienvenido a Teddy Bash!</h2>
+        <p></p>
+        <h3>Este juego desafía tus reflejos y habilidades rítmicas.</h3>
+        <p>1. Escucha atentamente la música.</p>
+        <p>2. Mantente atento al ritmo.</p>
+        <p>3. Cuando veas una nota en la partitura presiona su tecla correspondiente, "A", "D" o "K".</p>
+        <p>4. El objetivo es superar una puntuación establecida para avanzar al siguiente nivel.</p>
+        <p></p>
+        <h3>¡Sigue el ritmo y diviértete!</h3>
+        <img src="media/TEDDY-BASH_1.png" alt="Decoración" class="corner-img">
+    </div>
+
+    <!-- Pantalla de Curiosidades -->
+    <div id="curiosidades-container" class="curiosidades-container" style="display: none;">
+    <button class="close-curiosidades" onclick="closeCuriosidades()">X</button>
+    <h1>CURIOSIDADES</h1>
+    <p>Algunos conceptos musicales para conocer:</p>
+    <img src="media/Conceptos.png" alt="Conceptos Musicales" class="curiosidades-img">
+    </div>
+
+    <!-- Audio de Lobby <audio id="lobby-audio" src="media/gami lobby.wav" autoplay></audio>-->
+
+    <script src="js/menu.js"></script>
+</body>
+</html>

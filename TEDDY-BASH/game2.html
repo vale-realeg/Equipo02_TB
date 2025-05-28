@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Videojuego rítmico desarrollado con javascript y Tone.js"/>
+    <meta name="keywords" content="juego, ritmo, ufg, estudiantes, 2025, tonejs, js"/>
+    <meta name="copyright" content="2025 Stardust Knights"/>
+    <meta name="author" content="Stardust Knights"/>
+  <title>TEDDY-BASH - Nivel 2</title>
+  <link rel="icon" href="media/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <!-- Contenedor del Juego -->
+  <div id="game-container" class="game-container">
+    <div id="score-container" class="score-container">
+      Puntos: <span id="score">0</span>
+    </div>
+    <button class="menu-btn" onclick="goToMenu()">Regresar</button>
+    <div class="gif-container">
+      <img src="media/TeddyBash.gif" alt="Beat GIF" id="beat-gif"/>
+    </div>
+    <div class="sheet-container">
+      <img src="media/Partitura.png" alt="Partitura" id="sheet"/>
+      <img id="note-1" class="note caja" src="media/Caja_v2.png" alt="Caja"/>
+      <img id="note-2" class="note bombo" src="media/Bombo_v2.png" alt="Bombo"/>
+      <img id="note-3" class="note platillo" src="media/Platillo_v2.png" alt="Platillo"/>
+    </div>
+    <div class="buttons-container">
+      <button id="button-a" class="game-button caja-btn">A</button>
+      <button id="button-d" class="game-button bombo-btn">D</button>
+      <button id="button-k" class="game-button platillo-btn">K</button>
+    </div>
+  </div>
+
+  <div id="custom-message" class="custom-message" style="display: none;">
+  <div class="message-box">
+      <p id="message-text"></p>
+      <button onclick="closeMessage()">OK</button>
+    </div>
+  </div>
+
+  <audio id="game-audio" src="media/gami2DRUMLESS.wav" preload="auto"></audio>
+  <audio id="caja-sound" src="media/snare.wav" preload="auto"></audio>
+  <audio id="bombo-sound" src="media/kick.wav" preload="auto"></audio>
+  <audio id="platillo-sound" src="media/hat.wav" preload="auto"></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi@2.0.27/build/Midi.js"></script>
+  <script src="js/beats2.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>

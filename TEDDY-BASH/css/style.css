@@ -1,0 +1,397 @@
+@font-face {
+  font-family: 'chewyFont';
+  src: url('../fonts/Chewy-Bubble.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'carsFont';
+  src: url('../fonts/KGChasingCars.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'comicFont';
+  src: url('../fonts/Hey Comic.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F2F2F2; /* Fondo general */
+    color: #2B2B2B; /* Texto principal */
+}
+
+.menu-logo {
+    width: 300px;
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+
+/* ---Menú Principal---*/
+.menu-container {
+    background-color: #E0BBE4; /* Lila Suave */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5); /* Sombras durazno */
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 4px solid #FBC6A4;
+}
+
+h1, h2 {
+    font-family: 'chewyFont';
+    font-size: 40px;
+    color: #2B2B2B; /* Negro Rockero */
+    margin-bottom: 20px;
+}
+
+h3 {
+  font-family: 'carsFont', sans-serif;
+  font-size: 50px;
+  color: #2B2B2B;
+}
+
+p {
+  font-family: 'comicFont', sans-serif;
+}
+
+/* ---Botones--- */
+button {
+    font-family: 'chewyFont';
+    background-color: #F48FB1; /* Rosa Principal */
+    border: none;
+    color: #2B2B2B; /* Texto oscuro sobre fondo claro */
+    padding: 15px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+button:hover {
+    background-color: #D16D9E; /* Rosa Oscuro */
+}
+
+/* ---Tutorial---*/
+.tutorial-container {
+  background-color: #E0BBE4;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5);
+  width: 80%;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 4px solid #FBC6A4;
+}
+
+.tutorial-container h2 {
+    font-family:'chewyFont';
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2B2B2B;
+}
+
+.tutorial-container p {
+    font-size: 18px;
+    margin: 12px 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.corner-img {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    width: 250px; /* Ajusta según tamaño deseado */
+    height: auto;
+    z-index: 10;
+}
+
+/* Botón para cerrar el tutorial */
+.close-tutorial {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #FF4081; /* Fucsia eléctrico */
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-tutorial:hover {
+    background-color: #D16D9E; /* Rosa Oscuro */
+}
+
+/* ---Contenedor del Juego--- */
+.game-container {
+    font-family: 'chewyFont';
+    background-color: #E0BBE4;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5);
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border: 4px solid #FBC6A4;
+}
+
+/* Puntaje */
+.score-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    z-index: 2;
+}
+
+/* Menú en juego */
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    background-color: #D16D9E;
+    color: #F2F2F2;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu-btn:hover {
+    background-color: #F48FB1;
+}
+
+/* Partitura */
+.sheet-container {
+    position: relative;
+    top: 220px;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 2;
+}
+
+.sheet-container img#sheet {
+    margin-top: 250px;
+    width: 1000px;
+    height: 250px;
+}
+
+/* Gif animado */
+.gif-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    height: auto;
+    z-index: 1;
+}
+
+.gif-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Botones de juego */
+.buttons-container {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.game-button {
+    background-color: #F48FB1;
+    border: none;
+    color: #2B2B2B;
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.game-button:hover {
+    background-color: #D16D9E;
+}
+
+/* Al presionar tecla */
+.game-button:active {
+    background-color: #FF4081; /* Fucsia */
+}
+
+/* Notas musicales */
+.note {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* Posicionamiento de cada tipo de nota */
+.caja {
+    left: 10%;
+    top: 60%;
+    margin-top: 50px;
+    margin-left: 260px;
+}
+
+.bombo {
+    left: 45%;
+    top: 60%;
+    margin-top: 45px;
+    margin-left: 35px;
+}
+
+.platillo {
+    left: 80%;
+    top: 60%;
+    margin-top: 50px;
+    margin-left: -200px;
+}
+
+/* Feedback visual al presionar */
+.active-press {
+    background-color: #80DEEA !important; /* Cian Neón */
+    box-shadow: 0 0 15px #FF4081;
+    transform: scale(1.05);
+}
+
+.custom-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.message-box {
+    background-color: #E0BBE4;
+    border-radius: 10px;
+    border: 4px solid #FBC6A4;
+    box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5);
+    padding: 30px 40px;
+    text-align: center;
+    font-family: 'comicFont', sans-serif;
+}
+
+.message-box p {
+    font-family: 'comicFont';
+    font-size: 20px;
+    margin-bottom: 20px;
+    }
+
+.message-box button {
+    font-family: 'chewyFont';
+    background-color: #F48FB1;
+    border: none;
+    color: #2B2B2B;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.message-box button:hover {
+    background-color: #D16D9E;
+}
+
+.curiosidades-container {
+  background-color: #E0BBE4;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5);
+  width: 80%;
+  height: auto;
+  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow-y: auto;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 4px solid #FBC6A4;
+}
+
+.curiosidades-container h1 {
+  font-family: 'chewyFont';
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #2B2B2B;
+}
+
+.curiosidades-container p {
+  font-family: 'comicFont';
+  font-size: 18px;
+  margin: 12px 0;
+  color: #2B2B2B;
+}
+
+.curiosidades-img {
+  width: 75%;
+  height: 75%;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.close-curiosidades {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #FF4081;
+  border: none;
+  color: white;
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-curiosidades:hover {
+  background-color: #D16D9E;
+}
