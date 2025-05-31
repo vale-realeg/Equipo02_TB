@@ -1,0 +1,35 @@
+{
+    "lang": "es-SV",
+    "name": "Videojuego rítmico con js y tone.js",
+    "short_name": "Teddy Bash",
+    "description": "Deberás seguir el ritmo de la música y apretar las teclas correspondientes para seguir el beat",
+    "start_url": "./",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "orientation": "any",
+    "display": "standalone",
+    "icons":[
+        {
+            "src": "./media/icons/android/android-launchericon-192-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "screenshots":[
+        {
+            "src": "./media/screenshots/1920x913.png",
+            "sizes": "1920x913",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "Vista del videojuego en computadora"
+        },
+        {
+            "src": "./media/screenshots/1442x3206.png",
+            "sizes": "1442x3206",
+            "type": "image/png",
+            "form_factor": "narrow",
+            "label": "Vista del videojuego en móviles"
+        }
+    ]
+}

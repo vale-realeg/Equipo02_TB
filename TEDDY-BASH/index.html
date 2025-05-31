@@ -10,6 +10,7 @@
     <title>TEDDY-BASH - Menú</title>
     <link rel="icon" href="media/favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
     <!-- Menú Principal -->
@@ -45,8 +46,19 @@
     <img src="media/Conceptos.png" alt="Conceptos Musicales" class="curiosidades-img">
     </div>
 
-    <!-- Audio de Lobby <audio id="lobby-audio" src="media/gami lobby.wav" autoplay></audio>-->
+    <!-- Audio de Lobby -->
+
+    <audio id="menu-music" loop>
+    <source src="media/gami lobby.wav" type="audio/wav">
+    </audio>
 
     <script src="js/menu.js"></script>
+
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js',{scope:'./'});
+        }
+    </script>
+
 </body>
 </html>

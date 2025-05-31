@@ -23,6 +23,7 @@ body {
     height: 100vh;
     background-color: #F2F2F2; /* Fondo general */
     color: #2B2B2B; /* Texto principal */
+    overflow: hidden;
 }
 
 .menu-logo {
@@ -62,6 +63,7 @@ h3 {
 
 p {
   font-family: 'comicFont', sans-serif;
+  font-size: 25px;
 }
 
 /* ---Botones--- */
@@ -88,19 +90,21 @@ button:hover {
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(251, 198, 164, 0.5);
   width: 80%;
+  max-height: 80vh;
   height: auto;
   padding: 30px;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  overflow-y: auto;
+  overflow: hidden;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   border: 4px solid #FBC6A4;
+  justify-content: space-between;
 }
 
 .tutorial-container h2 {
@@ -110,8 +114,16 @@ button:hover {
     color: #2B2B2B;
 }
 
+.tutorial-container h3 {
+    font-family:'carsFont';
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #2B2B2B;
+}
+
 .tutorial-container p {
-    font-size: 18px;
+    font-family: 'comicFont';
+    font-size: 25px;
     margin: 12px 0;
     max-width: 600px;
     line-height: 1.6;
@@ -365,14 +377,14 @@ button:hover {
 
 .curiosidades-container p {
   font-family: 'comicFont';
-  font-size: 18px;
+  font-size: 25px;
   margin: 12px 0;
   color: #2B2B2B;
 }
 
 .curiosidades-img {
-  width: 75%;
-  height: 75%;
+  width: 80%;
+  height: 80%;
   margin-top: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);

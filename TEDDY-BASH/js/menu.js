@@ -1,17 +1,29 @@
-// Función para iniciar el juego 
+const menuMusic = document.getElementById("menu-music");
+
+// Reproducir el audio al cargar la página
+window.addEventListener("DOMContentLoaded", () => {
+    menuMusic.volume = 0.5;
+    menuMusic.play().catch((error) => {
+        console.warn("Autoplay falló, permite el audio en tu navegador", error);
+    });
+});
+
+// Función para iniciar el juego
 function startGame() {
-    window.location.href = 'game.html'; // Redirige a la página de juego
+    menuMusic.pause();
+    menuMusic.currentTime = 0;
+    window.location.href = 'game.html';
 }
 
 // Función para mostrar el tutorial
 function showTutorial() {
-    document.getElementById("menu-container").style.display = "none"; // Oculta el menú
-    document.getElementById("tutorial-container").style.display = "flex"; // Muestra el tutorial
+    document.getElementById("menu-container").style.display = "none";
+    document.getElementById("tutorial-container").style.display = "flex";
 }
 
 // Función para cerrar el tutorial
 function closeTutorial() {
-    document.getElementById("tutorial-container").style.display = "none"; // Oculta el tutorial
+    document.getElementById("tutorial-container").style.display = "none";
     document.getElementById("menu-container").style.display = "flex";
 }
 
