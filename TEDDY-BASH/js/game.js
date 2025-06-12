@@ -75,22 +75,37 @@ const finish = (last.time - t0) * 1000 + 500;
 
 timeouts.push(setTimeout(() => {
   if (window.location.pathname.includes('game.html')) {
+    // Primer nivel
     if (score >= 10000) {
       console.log('Puntuación suficiente, redirigiendo a game2.html');
       showMessage(`¡Felicidades! Avanzaste al siguiente nivel.`, () => {
-        window.location.href = 'game2.html';
+        window.location.href = 'game2.html'; // Redirige al nivel 2
       });
       return; // Impide que se ejecute otro showMessage
     } else {
       showMessage(`Nivel completado, pero intenta conseguir 10000 puntos o más.`, () => {
-      // Recargar la página para reiniciar el nivel
-      window.location.reload();
-    });
+        // Recargar la página para reiniciar el nivel
+        window.location.reload();
+      });
     }
-  } else {
-    // Nivel 2
-    showMessage(`¡Nivel completado! Puntos: ${score}`, () => {
-      window.location.href = 'index.html';
+  } else if (window.location.pathname.includes('game2.html')) {
+    // Segundo nivel
+    if (score >= 15000) {
+      console.log('Puntuación suficiente, redirigiendo a game3.html');
+      showMessage(`¡Felicidades! Avanzaste al siguiente nivel.`, () => {
+        window.location.href = 'game3.html'; // Redirige al nivel 3
+      });
+      return; // Impide que se ejecute otro showMessage
+    } else {
+      showMessage(`Nivel completado, pero intenta conseguir 15000 puntos o más.`, () => {
+        // Recargar la página para reiniciar el nivel
+        window.location.reload();
+      });
+    }
+  } else if (window.location.pathname.includes('game3.html')) {
+    // Tercer nivel
+    showMessage(`¡Juego completado! Puntos: ${score}`, () => {
+      window.location.href = 'index.html'; // Redirige al menú principal
     });
   }
 }, finish));

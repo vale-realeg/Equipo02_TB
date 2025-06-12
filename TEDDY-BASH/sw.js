@@ -8,10 +8,12 @@ self.addEventListener('install', event => {
             './index.html',
             './game.html',
             './game2.html',
+            './game3.html',
             './js/menu.js',
             './js/game.js',
             './js/beats.js',
             './js/beats2.js',
+            './js/beats3.js',
             './css/style.css'
         ]);
     })()
